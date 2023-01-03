@@ -3,12 +3,12 @@ on:
     types: [opened, edited, synchronize, reopened]
 
 jobs:
-  hello_world_job:
+  validate_pr:
     runs-on: ubuntu-latest
-    name: A job to validate PR
+    name: Validate Pull Request
     steps:
-      - name: Lint PR
-        id: lintPR
+      - name: validate PR
+        id: validatePR
         uses: Techwards/pr-keeper@feature/PRK-16-add-github-action
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
