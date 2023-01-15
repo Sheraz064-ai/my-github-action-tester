@@ -12,3 +12,5 @@ jobs:
         uses: Techwards/pr-keeper@feature/PRK-16-add-github-action
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          title-regex: >
+            ^Ticket\s\#[1-9]{1,}$
